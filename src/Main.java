@@ -5,7 +5,9 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        //region Задание первое
+        //region Для первой работы
+        /*
+        //Задание первое
         GregorianCalendar gc = new GregorianCalendar();
         Date date = gc.getTime();
         int year = gc.get(GregorianCalendar.YEAR);
@@ -31,10 +33,29 @@ public class Main {
         sw.bubbleSort(myArray);
         sw.end(); // останавливаем
         System.out.println("Отсортировало за: " + sw.getElapsedTime()); // у меня справляется за 13,225 в среднем
+
+        ArrayGuts arrayGuts = new ArrayGuts();
+        double[][] myAnotherArray = arrayGuts.CreateArray();
+        for (int i = 0; i < myAnotherArray.length; i++) {
+            for (int j = 0; j < myAnotherArray[i].length; j++) {
+                System.out.print(myAnotherArray[i][j] + " ");
+            }
+        }
+        */
+        //endregion
+
+        double[][] myArray = ArrayGuts.CreateArray();
+        Location location = ArrayGuts.locateLargest(myArray);
+        System.out.println("Макс. значение: " + location.maxValue +
+                " строка: " + location.row +
+                " столбец: " + location.column);
+
+
     }
 
+    //region Для первой работы
     public static int[] getRandomArray(){
-        int arraySize = 100000; // для задания размера массива
+        int arraySize = 1000; // для задания размера массива
         int[] array = new int[arraySize];
         Random rnd = new Random();
         for(int i = 0;i < arraySize;i++){ // рандомно пихаю туда числа
@@ -42,4 +63,5 @@ public class Main {
         }
         return array;
     }
+    //endregion
 }
