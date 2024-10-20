@@ -1,3 +1,5 @@
+package LessonsOneTwo;
+
 import java.util.Random;
 
 public class ArrayGuts {

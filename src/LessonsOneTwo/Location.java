@@ -1,3 +1,5 @@
+package LessonsOneTwo;
+
 public class Location {
 
     public double row, column, maxValue;

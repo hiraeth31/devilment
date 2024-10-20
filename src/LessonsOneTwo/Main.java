@@ -1,6 +1,4 @@
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Random;
+package LessonsOneTwo;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,14 +25,14 @@ public class Main {
 
         //Второе задание
         // Не совсем понял, что значит сделать клиент для класса, поэтому вот
-        StopWatch sw = new StopWatch();
+        LessonsOneTwo.StopWatch sw = new LessonsOneTwo.StopWatch();
         int[] myArray = getRandomArray(); // дергаем метод для получения рандомного неотсортированного массива
         sw.start(); // запускаем таймер
         sw.bubbleSort(myArray);
         sw.end(); // останавливаем
         System.out.println("Отсортировало за: " + sw.getElapsedTime()); // у меня справляется за 13,225 в среднем
 
-        ArrayGuts arrayGuts = new ArrayGuts();
+        LessonsOneTwo.ArrayGuts arrayGuts = new LessonsOneTwo.ArrayGuts();
         double[][] myAnotherArray = arrayGuts.CreateArray();
         for (int i = 0; i < myAnotherArray.length; i++) {
             for (int j = 0; j < myAnotherArray[i].length; j++) {
@@ -53,7 +51,7 @@ public class Main {
 
     }
 
-    //region Для первой работы
+    /*region Для первой работы
     public static int[] getRandomArray(){
         int arraySize = 1000; // для задания размера массива
         int[] array = new int[arraySize];
@@ -63,5 +61,5 @@ public class Main {
         }
         return array;
     }
-    //endregion
+    //endregion*/
 }
